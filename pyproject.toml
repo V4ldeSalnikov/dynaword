@@ -3,6 +3,8 @@ name = "dynaword"
 version = "0.1.0"
 description = "Shared tooling for the Dynaword datasets: the code that used to live in each dataset repo's src/dynaword"
 readme = "README.md"
+license = "CC0-1.0"  # same as the Dynaword datasets
+license-files = ["LICENSE"]
 requires-python = ">=3.12"
 dependencies = [
     # for commands

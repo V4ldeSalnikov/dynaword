@@ -2,8 +2,9 @@
 
 |              |                                                                                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Version**  | 0.1.0                                                                                                                                            |
+| **Version**  | 0.1.0 ([Changelog](CHANGELOG.md))                                                                                                              |
 | **Python**   | 3.12 or newer                                                                                                                                    |
+| **License**  | [CC0-1.0](LICENSE), the same as the Dynaword datasets                                                                                          |
 | **Used by**  | The [Dynaword](https://huggingface.co/collections/danish-foundation-models/dynawords) dataset repositories                                       |
 | **Contact**  | If you have questions about the tooling please create an issue in the discussions of the Dynaword repository you are contributing to            |
 
