@@ -1,0 +1,47 @@
+[project]
+name = "dynaword"
+version = "0.1.0"
+description = "Shared tooling for the Dynaword datasets: the code that used to live in each dataset repo's src/dynaword"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # for commands
+    "datasets>=3.0.0", # loading and validating datasets
+    "openai>=1.79.0", # OpenAI-compatible Propella inference example
+    "pydantic>=2.10.4", # validating schemas
+    "tabulate>=0.9.0", # creating md table
+    "tomlkit>=0.13.2", # reading toml
+    "transformers>=4.47.1", # tokenization
+    # figures
+    "plotnine>=0.14.5",
+    "plotly[kaleido]>=6.0.1",
+    "nbformat>=4.2.0",
+    # the test-suite ships inside the package (dynaword.tests)
+    "pytest>=8.3.4",
+]
+
+[project.urls]
+Repository = "https://github.com/danish-foundation-models/dynaword"
+Datasets = "https://huggingface.co/collections/danish-foundation-models/dynawords"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.3,<0.15", # 0.15+ changes the default rules and formats Markdown code blocks
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dynaword"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/dynaword/annotations/property_descriptions.md" = "dynaword/annotations/property_descriptions.md"
+
+[tool.ruff]
+extend-exclude = ["*.md"]
+
+[tool.ruff.lint]
+# the rule set the repos have always used; newer ruff versions enable many more by default
+select = ["E4", "E7", "E9", "F"]

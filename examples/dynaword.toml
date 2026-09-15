@@ -1,0 +1,19 @@
+# Optional settings of a dataset repo, read from <repo>/dynaword.toml.
+# These are the values that used to be edited into the code of each repo.
+
+# Hugging Face dataset id; used for the annotation links in source datasheets.
+hub_id = "danish-foundation-models/faroese-dynaword"
+
+# Folders under data/ that were removed on purpose; the tests do not require
+# them to be listed in README.md.
+removed_sources = []
+
+# Dashed reference lines in the tokens-over-time plot.
+[[reference_corpora]]
+name = "FC3: Faroese Common Crawl Corpus (Máltøknidepilin, 2023)"
+tokens = 10_000_000
+
+# Licence names grouped under a generic label in the README licence table
+# (in addition to the built-in ones in tables.py).
+[license_names]
+"Faroese Copyright Law" = "Other (No attribution required)"
