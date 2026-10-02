@@ -28,7 +28,8 @@ configs:
 
 # Dummy Dynaword
 
-A synthetic corpus for the smoke test. Run `create.py` to generate its Parquet files.
+A synthetic corpus for the workflow test. Run `data/news/create.py` and
+`data/stories/create.py` to generate each source's Parquet files.
 The test copies this folder to a temporary location before running the workflows.
 
 <!-- START README TABLE -->
@@ -77,4 +78,4 @@ Six synthetic Danish documents from two sources.
 
 ### Annotations
 
-All annotation values and token counts are synthetic fixture data.
+Annotations and token counts are hand-set test values, not model or tokenizer outputs.
