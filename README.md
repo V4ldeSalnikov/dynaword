@@ -175,3 +175,11 @@ Yes. The commands work on the current directory; set `DYNAWORD_REPO` to the path
 
 Clone this repository, run `make install`, and try your change against a dataset repository with the commands above.
 `make lint` formats and checks the code.
+
+Run `uv run pytest` (or `make test`) for the tooling smoke test. It creates a temporary copy of
+`tests/fixtures/dummy_dynaword`, generates six synthetic documents across two sources, and runs
+the statistics/plot generation, version bump, and existing corpus validation tests on that copy.
+The fixture uses synthetic token counts and annotations, so no models or datasets are downloaded.
+
+The smoke test requires Git and Chrome/Chromium for Kaleido's image export. If a compatible browser
+is not already installed, run `uv run plotly_get_chrome`. Generated files stay in the temporary copy.
